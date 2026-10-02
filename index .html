@@ -1,0 +1,2569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yash Tea | Premium Tea & Coffee</title>
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf0;
+    color: #243126;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+:root {
+    --green: #173d25;
+    --green2: #285f39;
+    --dark: #0b2113;
+    --gold: #e8bd58;
+    --gold2: #f7dc91;
+    --cream: #fffaf0;
+    --cream2: #f5eddd;
+    --brown: #694125;
+    --text: #243126;
+    --white: #ffffff;
+    --border: #e8deca;
+    --shadow: 0 12px 35px rgba(20, 50, 30, .10);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(23, 61, 37, .98);
+    border-bottom: 1px solid rgba(232, 189, 88, .3);
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    width: 125px;
+    height: 62px;
+    object-fit: contain;
+    background: #fff;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: var(--gold2);
+}
+
+.cart-btn {
+    border: 0;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 11px 17px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .2s;
+}
+
+.cart-btn:hover {
+    background: var(--gold2);
+}
+
+.cart-count {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    color: white;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 25, 14, .92),
+            rgba(7, 25, 14, .65),
+            rgba(7, 25, 14, .20)
+        ),
+        url("images/hero-tea.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+    padding: 90px 20px;
+    color: white;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .3);
+    color: var(--gold2);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--gold2);
+}
+
+.hero h2 {
+    font-size: clamp(22px, 3vw, 34px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #f4f4f4;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 23px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: .2s;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    background: var(--gold2);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .08);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--green);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-head span {
+    color: var(--green2);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-head h2 {
+    color: var(--green);
+    font-size: 42px;
+    margin-top: 8px;
+}
+
+.section-head p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #70776f;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    background: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 28px 20px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    transition: .3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    width: 62px;
+    height: 62px;
+    margin: auto auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--gold2);
+    font-size: 27px;
+}
+
+.feature h3 {
+    color: var(--green);
+    margin-bottom: 7px;
+}
+
+.feature p {
+    color: #70776f;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SHOP
+========================================================= */
+
+.shop {
+    background: var(--cream);
+}
+
+.shop-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 50px;
+    border: 1px solid #d9ceb9;
+    background: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    border-color: var(--green2);
+    box-shadow: 0 0 0 3px rgba(40, 95, 57, .08);
+}
+
+.categories {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    border: 1px solid #d8ccb5;
+    background: white;
+    color: var(--green);
+    padding: 10px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--green);
+    color: white;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 23px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 7px 25px rgba(20, 50, 30, .07);
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(20, 50, 30, .14);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
+    background: #d9bd91;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-sticker {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    background: rgba(255, 255, 255, .96);
+    color: var(--green);
+    padding: 7px 11px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .12);
+}
+
+
+/* =========================================================
+   PRODUCT BODY
+========================================================= */
+
+.product-body {
+    padding: 19px;
+}
+
+.product-category {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #90785a;
+    font-weight: bold;
+}
+
+.product-body h3 {
+    color: var(--green);
+    font-size: 18px;
+    line-height: 1.25;
+    margin: 6px 0 8px;
+}
+
+.product-description {
+    color: #737a73;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 39px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+.price {
+    color: var(--brown);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.unit {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.add-btn {
+    border: 0;
+    background: var(--green);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.add-btn:hover {
+    background: var(--green2);
+}
+
+.empty {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image {
+    height: 510px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text span {
+    color: var(--green2);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    color: var(--green);
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 10px 0 20px;
+}
+
+.about-text p {
+    color: #6f776f;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.about-list li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.about-list li::before {
+    content: "✓";
+    color: var(--green2);
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    background: var(--green);
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 30px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .05);
+}
+
+.contact-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: var(--gold2);
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #dce7df;
+    line-height: 1.6;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: var(--gold);
+    color: var(--dark);
+    font-weight: bold;
+    transition: .2s;
+}
+
+.map-button:hover {
+    background: var(--gold2);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #0b2113;
+    color: #cbd6ce;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer-logo {
+    width: 110px;
+    height: 55px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+footer strong {
+    color: var(--gold2);
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.cart-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: min(430px, 100%);
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -15px 0 45px rgba(0, 0, 0, .2);
+    transition: .35s;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-head {
+    background: var(--green);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-head h2 {
+    color: var(--gold2);
+}
+
+.close-cart {
+    border: 0;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-item-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart-item-name {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.cart-item-price {
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--cream2);
+    color: var(--green);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-btn {
+    border: 0;
+    background: none;
+    color: #ad4545;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 60px 15px;
+    color: #888;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    color: var(--green);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    border: 0;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.clear-btn {
+    width: 100%;
+    border: 0;
+    background: #f3eeee;
+    color: #9b3939;
+    padding: 11px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 8px 12px;
+    }
+
+    .logo-area img {
+        width: 105px;
+        height: 52px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding: 70px 18px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .feature-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-head h2 {
+        font-size: 34px;
+    }
+
+    .shop-tools {
+        display: block;
+    }
+
+    .categories {
+        margin-top: 13px;
+    }
+
+    .category-btn {
+        font-size: 12px;
+        padding: 9px 11px;
+    }
+
+    .cart-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+    <div class="navbar">
+
+        <a href="#home" class="logo-area">
+            <img
+                src="images/yashlogo.jpg"
+                alt="Yash Tea Logo"
+            >
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+            class="cart-btn"
+            onclick="openCart()"
+        >
+            🛒 Cart
+            <span
+                class="cart-count"
+                id="cartCount"
+            >0</span>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            🍃 कड़क • ताज़ा • दर्जेदार
+        </div>
+
+        <h1>
+            Yash <span>Tea</span>
+        </h1>
+
+        <h2>
+            Every Cup, A Perfect Taste ☕
+        </h2>
+
+        <p>
+            Premium tea powder, tea leaves, coffee powder
+            and roasted coffee for your perfect everyday cup.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#shop"
+                class="btn btn-primary"
+            >
+                Explore Products
+            </a>
+
+            <a
+                href="https://wa.me/919673073050"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline"
+            >
+                Order on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🍃
+                </div>
+
+                <h3>
+                    Premium Tea
+                </h3>
+
+                <p>
+                    Quality tea powder and tea leaves.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ☕
+                </div>
+
+                <h3>
+                    Premium Coffee
+                </h3>
+
+                <p>
+                    Fresh roasted coffee products.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌿
+                </div>
+
+                <h3>
+                    Green Tea
+                </h3>
+
+                <p>
+                    Fresh green tea varieties.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🫘
+                </div>
+
+                <h3>
+                    Coffee Beans
+                </h3>
+
+                <p>
+                    Selected roasted coffee beans.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SHOP
+========================================================= -->
+
+<section
+    class="shop"
+    id="shop"
+>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span>
+                OUR COLLECTION
+            </span>
+
+            <h2>
+                Tea & Coffee Products
+            </h2>
+
+            <p>
+                Choose your favourite tea or coffee.
+            </p>
+
+        </div>
+
+
+        <div class="shop-tools">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search tea or coffee..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="categories">
+
+                <button
+                    class="category-btn active"
+                    data-category="All"
+                >
+                    All
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Tea"
+                >
+                    🍃 Tea
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Green Tea"
+                >
+                    🌿 Green Tea
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Filter Coffee"
+                >
+                    ☕ Filter Coffee
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Coffee Beans"
+                >
+                    🫘 Coffee Beans
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Instant Coffee"
+                >
+                    ☕ Instant Coffee
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Flavour Coffee"
+                >
+                    ☕ Flavour Coffee
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="product-grid"
+            id="productGrid"
+        ></div>
+
+
+        <div
+            class="empty"
+            id="emptyMessage"
+        >
+
+            <h3>
+                No product found
+            </h3>
+
+            <p>
+                Try another tea or coffee name.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="images/hero-tea.jpg"
+                    alt="Yash Tea"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <span>
+                    ABOUT YASH TEA
+                </span>
+
+                <h2>
+                    A Good Cup Starts With Good Ingredients.
+                </h2>
+
+                <p>
+                    Yash Tea brings quality tea and coffee products
+                    for everyday Indian tea and coffee lovers.
+                </p>
+
+                <p>
+                    From strong tea powder and premium tea leaves
+                    to green tea, filter coffee and roasted coffee beans.
+                </p>
+
+
+                <ul class="about-list">
+
+                    <li>
+                        Premium tea powder
+                    </li>
+
+                    <li>
+                        Quality tea leaves
+                    </li>
+
+                    <li>
+                        Green tea
+                    </li>
+
+                    <li>
+                        Filter coffee
+                    </li>
+
+                    <li>
+                        Roasted coffee beans
+                    </li>
+
+                    <li>
+                        Instant coffee
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="#shop"
+                    class="btn btn-primary"
+                >
+                    View Products
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span style="color:#f7dc91;">
+                VISIT YASH TEA
+            </span>
+
+            <h2 style="color:white;">
+                Come & Enjoy Your Cup
+            </h2>
+
+            <p style="color:#d9e2dc;">
+                Visit our store or contact us for orders.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Our Address
+                </h3>
+
+                <p>
+                    Jagdamb Complex, Opposite Axis Bank,
+                    Jijau Chowk, T.V. Centre,
+                    Sudarshan Nagar, N-9, CIDCO,
+                    Chhatrapati Sambhajinagar,
+                    Maharashtra - 431003
+                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/DDbSoJGcAQpTzWAe9"
+                    target="_blank"
+                    rel="noopener"
+                    class="map-button"
+                >
+                    Open Google Maps
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    +91 96730 73050
+                </p>
+
+                <a
+                    href="tel:+919673073050"
+                    class="map-button"
+                >
+                    Call Now
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Send your product list directly on WhatsApp.
+                </p>
+
+                <a
+                    href="https://wa.me/919673073050"
+                    target="_blank"
+                    rel="noopener"
+                    class="map-button"
+                >
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <img
+        src="images/yashlogo.jpg"
+        alt="Yash Tea Logo"
+        class="footer-logo"
+    >
+
+    <p>
+        © 2026 <strong>Yash Tea</strong>. All Rights Reserved.
+    </p>
+
+    <p>
+        Tea • Green Tea • Coffee • Coffee Beans
+    </p>
+
+</footer>
+
+
+<!-- =========================================================
+     CART
+========================================================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCart()"
+></div>
+
+
+<div
+    class="cart-panel"
+    id="cartPanel"
+>
+
+    <div class="cart-head">
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+            aria-label="Close cart"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <div class="cart-empty">
+
+            Your cart is empty.
+
+            <br><br>
+
+            Add some tea or coffee ☕
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <span id="cartTotal">
+                ₹0
+            </span>
+
+        </div>
+
+
+        <button
+            class="whatsapp-btn"
+            onclick="sendWhatsAppOrder()"
+        >
+            💬 Order on WhatsApp
+        </button>
+
+
+        <button
+            class="clear-btn"
+            onclick="clearCart()"
+        >
+            Clear Cart
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PRODUCT DATA
+========================================================= */
+
+const products = [
+
+    /* TEA */
+
+    {
+        id: 1,
+        name: "Super Fine Dust Tea",
+        category: "Tea",
+        price: 400,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA POWDER",
+        description: "Fine black tea powder for a strong and rich cup."
+    },
+
+    {
+        id: 2,
+        name: "Super Fine Memories Tea",
+        category: "Tea",
+        price: 400,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA",
+        description: "Premium black tea for a rich everyday cup."
+    },
+
+    {
+        id: 3,
+        name: "Super Fine Family Mix Tea",
+        category: "Tea",
+        price: 400,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA BLEND",
+        description: "Balanced tea blend for everyday family chai."
+    },
+
+    {
+        id: 4,
+        name: "Super Fine Chocolaty Mix Tea",
+        category: "Tea",
+        price: 400,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA",
+        description: "Premium black tea blend."
+    },
+
+
+    /* HYGROWN */
+
+    {
+        id: 5,
+        name: "Hygrown Dust Tea",
+        category: "Tea",
+        price: 480,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 FINE DUST",
+        description: "Fine tea powder for a strong everyday chai."
+    },
+
+    {
+        id: 6,
+        name: "Hygrown Memories Tea",
+        category: "Tea",
+        price: 480,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA",
+        description: "Premium black tea for a rich cup."
+    },
+
+    {
+        id: 7,
+        name: "Hygrown Mixture Tea",
+        category: "Tea",
+        price: 480,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA BLEND",
+        description: "Carefully blended tea for everyday use."
+    },
+
+    {
+        id: 8,
+        name: "Hygrown Chocolaty Tea",
+        category: "Tea",
+        price: 480,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🍃 TEA",
+        description: "Premium black tea blend."
+    },
+
+
+    /* DARJEELING */
+
+    {
+        id: 9,
+        name: "Darjeeling Special Dust",
+        category: "Tea",
+        price: 600,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 DARJEELING",
+        description: "Fine Darjeeling tea powder."
+    },
+
+    {
+        id: 10,
+        name: "Darjeeling Memories",
+        category: "Tea",
+        price: 600,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 DARJEELING",
+        description: "Premium Darjeeling tea."
+    },
+
+    {
+        id: 11,
+        name: "Darjeeling Whole Leaf",
+        category: "Tea",
+        price: 600,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 WHOLE LEAF",
+        description: "Premium whole tea leaves."
+    },
+
+    {
+        id: 12,
+        name: "Regular Hotel Blend",
+        category: "Tea",
+        price: 480,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "☕ HOTEL BLEND",
+        description: "Strong tea blend for hotel-style chai."
+    },
+
+    {
+        id: 13,
+        name: "Special Hotel Blend",
+        category: "Tea",
+        price: 600,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "☕ SPECIAL BLEND",
+        description: "Premium strong tea blend."
+    },
+
+
+    /* GREEN TEA */
+
+    {
+        id: 14,
+        name: "Green Tea Regular",
+        category: "Green Tea",
+        price: 1200,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 GREEN TEA",
+        description: "Fresh green tea leaves."
+    },
+
+    {
+        id: 15,
+        name: "Green Tea Organic",
+        category: "Green Tea",
+        price: 1400,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 GREEN TEA",
+        description: "Premium green tea."
+    },
+
+    {
+        id: 16,
+        name: "Green Tea Darjeeling",
+        category: "Green Tea",
+        price: 1600,
+        unit: "1 kg",
+        type: "tea",
+        sticker: "🌿 DARJEELING",
+        description: "Premium Darjeeling green tea."
+    },
+
+    {
+        id: 17,
+        name: "Flavour Green Tea",
+        category: "Green Tea",
+        price: 300,
+        unit: "100 gm",
+        type: "tea",
+        sticker: "🌿 GREEN TEA",
+        description: "Refreshing green tea."
+    },
+
+
+    /* FILTER COFFEE */
+
+    {
+        id: 18,
+        name: "Janata Coffee",
+        category: "Filter Coffee",
+        price: 1000,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Roasted coffee for filter brewing."
+    },
+
+    {
+        id: 19,
+        name: "Rajdhani Coffee",
+        category: "Filter Coffee",
+        price: 1200,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Rich roasted coffee blend."
+    },
+
+    {
+        id: 20,
+        name: "Balaji Coffee",
+        category: "Filter Coffee",
+        price: 1400,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Premium roasted coffee."
+    },
+
+    {
+        id: 21,
+        name: "Anmol Coffee",
+        category: "Filter Coffee",
+        price: 1600,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Rich roasted coffee."
+    },
+
+    {
+        id: 22,
+        name: "Black Current Coffee",
+        category: "Filter Coffee",
+        price: 1800,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Premium coffee blend."
+    },
+
+
+    /* COFFEE BEANS */
+
+    {
+        id: 23,
+        name: "House Blend",
+        category: "Coffee Beans",
+        price: 1600,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "🫘 COFFEE",
+        description: "Premium roasted coffee beans."
+    },
+
+    {
+        id: 24,
+        name: "ESPRESS Blend",
+        category: "Coffee Beans",
+        price: 2000,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "🫘 COFFEE",
+        description: "Dark roasted coffee beans."
+    },
+
+    {
+        id: 25,
+        name: "ARABICA Coffee",
+        category: "Coffee Beans",
+        price: 2400,
+        unit: "1 kg",
+        type: "coffee",
+        sticker: "🫘 COFFEE",
+        description: "Premium Arabica coffee beans."
+    },
+
+
+    /* INSTANT */
+
+    {
+        id: 26,
+        name: "Trimutti Instant Coffee",
+        category: "Instant Coffee",
+        price: 120,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Instant coffee granules."
+    },
+
+    {
+        id: 27,
+        name: "Nesta Coffee",
+        category: "Instant Coffee",
+        price: 140,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Smooth instant coffee."
+    },
+
+    {
+        id: 28,
+        name: "Star Insta Strong Coffee",
+        category: "Instant Coffee",
+        price: 180,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Strong instant coffee."
+    },
+
+    {
+        id: 29,
+        name: "Dry Freezer Coffee",
+        category: "Instant Coffee",
+        price: 280,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Freeze-dried coffee."
+    },
+
+
+    /* FLAVOUR COFFEE */
+
+    {
+        id: 30,
+        name: "Smooth Hazelnut",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Smooth flavoured coffee."
+    },
+
+    {
+        id: 31,
+        name: "Crunchy Cocoa Punch",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Rich flavoured coffee."
+    },
+
+    {
+        id: 32,
+        name: "Caramel Candy",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Smooth flavoured coffee."
+    },
+
+    {
+        id: 33,
+        name: "Fresh Coffee",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Fresh roasted coffee."
+    },
+
+    {
+        id: 34,
+        name: "Mighty Almond",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Premium almond flavoured coffee."
+    },
+
+    {
+        id: 35,
+        name: "Creamy Vanilla",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Smooth vanilla flavoured coffee."
+    },
+
+    {
+        id: 36,
+        name: "Choco-Orange",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Premium flavoured coffee."
+    },
+
+    {
+        id: 37,
+        name: "Mocha",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Rich mocha coffee."
+    },
+
+    {
+        id: 38,
+        name: "Very Berry",
+        category: "Flavour Coffee",
+        price: 250,
+        unit: "50 gm",
+        type: "coffee",
+        sticker: "☕ COFFEE",
+        description: "Premium flavoured coffee."
+    }
+
+];
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   tea.jpg = ALL TEA PRODUCTS
+   coffee.jpg = ALL COFFEE PRODUCTS
+========================================================= */
+
+function createProductVisual(type) {
+
+    const image =
+        type === "tea"
+            ? "images/tea.jpg"
+            : "images/coffee.jpg";
+
+    const altText =
+        type === "tea"
+            ? "Yash Tea Product"
+            : "Yash Coffee Product";
+
+    return `
+        <img
+            src="${image}"
+            alt="${altText}"
+            loading="lazy"
+        >
+    `;
+}
+
+
+/* =========================================================
+   PRODUCT RENDER
+========================================================= */
+
+let currentCategory = "All";
+let cart = [];
+
+
+function formatPrice(price) {
+
+    return "₹" + price.toLocaleString("en-IN");
+
+}
+
+
+function renderProducts() {
+
+    const grid =
+        document.getElementById("productGrid");
+
+    const empty =
+        document.getElementById("emptyMessage");
+
+    const search =
+        document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    const filtered =
+        products.filter(product => {
+
+            const categoryMatch =
+                currentCategory === "All" ||
+                product.category === currentCategory;
+
+
+            const searchMatch =
+                product.name
+                    .toLowerCase()
+                    .includes(search) ||
+
+                product.category
+                    .toLowerCase()
+                    .includes(search);
+
+
+            return categoryMatch && searchMatch;
+
+        });
+
+
+    grid.innerHTML = "";
+
+
+    if (filtered.length === 0) {
+
+        empty.style.display = "block";
+        return;
+
+    }
+
+
+    empty.style.display = "none";
+
+
+    filtered.forEach(product => {
+
+        const card =
+            document.createElement("article");
+
+
+        card.className = "product-card";
+
+
+        card.innerHTML = `
+
+            <div class="product-image">
+
+                ${createProductVisual(product.type)}
+
+                <div class="product-sticker">
+                    ${product.sticker}
+                </div>
+
+            </div>
+
+
+            <div class="product-body">
+
+                <div class="product-category">
+                    ${product.category}
+                </div>
+
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <p class="product-description">
+                    ${product.description}
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <div>
+
+                        <div class="price">
+                            ${formatPrice(product.price)}
+                        </div>
+
+                        <span class="unit">
+                            ${product.unit}
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-btn"
+                        onclick="addToCart(${product.id}, this)"
+                    >
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+document
+    .querySelectorAll(".category-btn")
+    .forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            document
+                .querySelectorAll(".category-btn")
+                .forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+            this.classList.add("active");
+
+
+            currentCategory =
+                this.dataset.category;
+
+
+            renderProducts();
+
+        });
+
+    });
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+    .getElementById("searchInput")
+    .addEventListener("input", renderProducts);
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function addToCart(id, button) {
+
+    const product =
+        products.find(item => item.id === id);
+
+
+    if (!product) {
+        return;
+    }
+
+
+    const existing =
+        cart.find(item => item.id === id);
+
+
+    if (existing) {
+
+        existing.qty++;
+
+    } else {
+
+        cart.push({
+            ...product,
+            qty: 1
+        });
+
+    }
+
+
+    updateCart();
+
+
+    const oldText =
+        button.innerHTML;
+
+
+    button.innerHTML =
+        "✓ Added";
+
+
+    setTimeout(() => {
+
+        button.innerHTML =
+            oldText;
+
+    }, 800);
+
+}
+
+
+function changeQty(id, change) {
+
+    const item =
+        cart.find(item => item.id === id);
+
+
+    if (!item) {
+        return;
+    }
+
+
+    item.qty += change;
+
+
+    if (item.qty <= 0) {
+
+        cart =
+            cart.filter(item => item.id !== id);
+
+    }
+
+
+    updateCart();
+
+}
+
+
+function removeFromCart(id) {
+
+    cart =
+        cart.filter(item => item.id !== id);
+
+
+    updateCart();
+
+}
+
+
+function clearCart() {
+
+    cart = [];
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart() {
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+
+    const quantity =
+        cart.reduce(
+            (sum, item) => sum + item.qty,
+            0
+        );
+
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum + item.price * item.qty,
+            0
+        );
+
+
+    cartCount.innerText =
+        quantity;
+
+
+    cartTotal.innerText =
+        formatPrice(total);
+
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+
+            <div class="cart-empty">
+
+                Your cart is empty.
+
+                <br><br>
+
+                Add some tea or coffee ☕
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    cartItems.innerHTML = "";
+
+
+    cart.forEach(item => {
+
+        const div =
+            document.createElement("div");
+
+
+        div.className =
+            "cart-item";
+
+
+        div.innerHTML = `
+
+            <div class="cart-item-top">
+
+                <div>
+
+                    <div class="cart-item-name">
+                        ${item.name}
+                    </div>
+
+                    <small>
+                        ${item.unit}
+                    </small>
+
+                </div>
+
+
+                <div class="cart-item-price">
+                    ${formatPrice(item.price * item.qty)}
+                </div>
+
+            </div>
+
+
+            <div class="cart-controls">
+
+                <button
+                    class="qty-btn"
+                    onclick="changeQty(${item.id}, -1)"
+                >
+                    −
+                </button>
+
+
+                <strong>
+                    ${item.qty}
+                </strong>
+
+
+                <button
+                    class="qty-btn"
+                    onclick="changeQty(${item.id}, 1)"
+                >
+                    +
+                </button>
+
+
+                <button
+                    class="remove-btn"
+                    onclick="removeFromCart(${item.id})"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        `;
+
+
+        cartItems.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+function openCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.add("open");
+
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("show");
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function closeCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("open");
+
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("show");
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   ESC KEY - CLOSE CART
+========================================================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeCart();
+    }
+
+});
+
+
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
+
+function sendWhatsAppOrder() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Please add a product first."
+        );
+
+        return;
+
+    }
+
+
+    let message =
+        "Hello Yash Tea,%0A%0A" +
+        "I would like to place an order:%0A%0A";
+
+
+    cart.forEach((item, index) => {
+
+        message +=
+            `${index + 1}. ${item.name}%0A` +
+            `Qty: ${item.qty} x ${item.unit}%0A` +
+            `Price: ₹${item.price * item.qty}%0A%0A`;
+
+    });
+
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum + item.price * item.qty,
+            0
+        );
+
+
+    message +=
+        `Total: ₹${total}%0A%0A` +
+        "Thank you.";
+
+
+    window.open(
+        "https://wa.me/919673073050?text=" + message,
+        "_blank"
+    );
+
+}
+
+
+/* =========================================================
+   START WEBSITE
+========================================================= */
+
+renderProducts();
+updateCart();
+
+</script>
+
+</body>
+</html>
